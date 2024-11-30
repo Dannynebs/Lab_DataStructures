@@ -6,7 +6,7 @@ Console.WriteLine("Please enter a word you would like to reverse");
 string userWord=Console.ReadLine();
 
 //Console.WriteLine(Reverse(userWord));
-
+Console.WriteLine(Reverse(userWord));
 
 
 
@@ -20,3 +20,13 @@ string userWord=Console.ReadLine();
 //    return new string(charArray);
 //}
 
+string Reverse(string input)
+{
+    Stack<char> stack = new Stack<char>(input);
+    string temp = "";
+    while (stack.Count > 0)
+    {
+        temp += stack.Pop();
+    }
+    return temp;
+}
